@@ -1,6 +1,8 @@
-# temizle_42 @yaktas @eryilmaz
+# 42 Tools 
 
-Çalıştırma:
+Disklerinizin dolma problemine çözüm olarak geçici dosyaları ve önbellekte tutulan verileri silmek için bir araç hazırladık. 
+
+### Çalıştırma:
 ```
 ./temizle_beni.sh 
 ```
