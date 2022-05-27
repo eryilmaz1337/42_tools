@@ -17,32 +17,34 @@ read -n1 -p "${purple}Bilgisayarınızda yer açmak istermisiniz ?[${green}y${pu
 echo ""
 
 if [ -n "$input" ] && [ "$input" = "y" ]; then
-    echo "Temizlik başlıyor.....";
-    echo "./.Trash/* Temizleniyor......"
+    echo "Temizlik başlıyor lütfen bekleyin...";
+    echo "./.Trash/* Temizleniyor lütfen bekleyin..."
     rm -rf ./.Trash/*;
-    echo "./.cache/* Temizleniyor......"
+    echo "./.cache/* Temizleniyor lütfen bekleyin..."
     rm -rf ./.cache/*;
-    echo "./Library/Caches/* Temizleniyor......"
+    echo "./Library/Caches/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Caches/*;
-    echo "./Library/Containers/com.docker.docker/* Temizleniyor......"
+    echo "./Library/Containers/com.docker.docker/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Containers/com.docker.docker/*;
-    echo "./Library/Containers/* Temizleniyor......"
+    echo "./Library/Containers/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Containers/*;
-    echo "./Library/Application Support/Code/User/* Temizleniyor......"
+    echo "./Library/Application Support/Code/User/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Application Support/Code/User/*;
-    echo "./Library/Application Support/Code/CachedData/* Temizleniyor......"
+    echo "./Library/Application Support/Code/CachedData/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Application Support/Code/CachedData/*;
-    echo "./Library/Developer/CoreSimulator/* Temizleniyor......"
+    echo "./Library/Developer/CoreSimulator/* Temizleniyor lütfen bekleyin..."
     rm -rf ./Library/Developer/CoreSimulator/*;
+    echo "${green}Temizlik yapıldı."
     else
     echo "Temizlik yapılmadı.";
     fi
 read -n1 -p "${purple}İndirilenler klasörünü de temizlemek ister misiniz ?[${green}y${purple}/${red}N${purple}]${reset} " input
 echo ""
 if [ -n "$input" ] && [ "$input" = "y" ]; then
-        echo "İndirilenler temizleniyor......";
+        echo "İndirilenler temizleniyor lütfen bekleyin...";
 		rm -rf ./Downloads/*;
-    echo "--------------------------------------------------------------------------------"
+        echo "${green}Temizlik yapıldı."
+    echo "${reset}--------------------------------------------------------------------------------"
     echo -e "${purple}\nTemizlikten önceki alan:\n${reset}${initial_df}${purple}\n\nTemizlikten sonraki alan:${reset}"
         df -h . | grep --color=always -E "Size|Used|Avail|Capacity|[0-9]*\.*[0-9]*Mi|[0-9]*\.*[0-9]*Gi|[0-9]+\.*[0-9]+% |$"
     echo "--------------------------------------------------------------------------------"
