@@ -6,6 +6,7 @@ red=$'\033[0;31m'
 green=$'\033[0;32m'
 
 # Commands
+git pull;
 clear;
 echo "--------------------------------------------------------------------------------"
 initial_df=$(df -h . | grep --color=always -E "Size|Used|Avail|Capacity|[0-9]*\.*[0-9]*Mi|[0-9]*\.*[0-9]*Gi|[0-9]+\.*[0-9]+% |$")
