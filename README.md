@@ -1,5 +1,5 @@
 
-<center> <h1>Temizle Beni</h1> </center>	
+<h1 align="center">Temizle Beni</h1>
 
 </p>
 <p align="center">
